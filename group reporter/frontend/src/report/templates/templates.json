@@ -1,0 +1,16 @@
+{
+  "templates": [
+    {
+      "id": "classic",
+      "name": "QQ模板",
+      "description": "最初的模板",
+      "component": "classic.vue"
+    },
+    {
+      "id": "wechat", 
+      "name": "微信朋友圈",
+      "description": "绿色清新风格",
+      "component": "wechat.vue"
+    }
+  ]
+}
