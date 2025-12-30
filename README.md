@@ -78,10 +78,11 @@
 
 ## 🖼️ 使用截图
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
+<img width="998" height="1179" alt="image" src="https://github.com/user-attachments/assets/0984120c-3141-401e-ae14-fb32ac6f233f" />
+<img width="972" height="1064" alt="image" src="https://github.com/user-attachments/assets/393d32b9-0ef3-4959-81d7-a01e85c429e7" />
+<img width="981" height="876" alt="image" src="https://github.com/user-attachments/assets/09980187-dffc-4034-965c-040e71067679" />
+<img width="629" height="1079" alt="image" src="https://github.com/user-attachments/assets/4eb42e85-150e-4583-aac3-a5f9bae0f499" />
+
 
 ---
 
