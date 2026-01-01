@@ -142,6 +142,38 @@ const copyPersonalReportUrl = async (rid) => {
   try { await navigator.clipboard.writeText(url); alert('链接已复制') } catch { prompt('请手动复制：', url) }
 }
 
+// 删除群聊报告
+const deleteReport = async (rid) => {
+  if (!confirm('确定要删除这份群聊报告吗？')) return
+  try {
+    // 调用后端 @app.route('/api/reports/<report_id>', methods=['DELETE']) 接口
+    const { data } = await axios.delete(`${API_BASE}/reports/${rid}`)
+    if (data.success) {
+      alert('删除成功')
+      loadReports(reports.value.page) // 刷新当前列表
+    }
+  } catch (e) {
+    console.error("删除报错:", e)
+    alert(e.response?.data?.error || '删除失败')
+  }
+}
+
+// 删除个人报告
+const deletePersonalReport = async (rid) => {
+  if (!confirm('确定要删除这份个人报告吗？')) return
+  try {
+    // 调用后端 @app.route('/api/personal-reports/<report_id>', methods=['DELETE']) 接口
+    const { data } = await axios.delete(`${API_BASE}/personal-reports/${rid}`)
+    if (data.success) {
+      alert('删除成功')
+      loadReports(reports.value.page) // 刷新当前列表
+    }
+  } catch (e) {
+    console.error("删除报错:", e)
+    alert(e.response?.data?.error || '删除失败')
+  }
+}
+
 async function generatePersonalReport(params) {
     const { file, userName, startDate, endDate, useStopwords } = params
     
