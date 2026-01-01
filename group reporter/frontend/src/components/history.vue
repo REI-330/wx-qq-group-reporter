@@ -48,8 +48,8 @@
                         </div>
 
                         <div class="report-actions">
-                            <button class="btn-action btn-view" @click="$emit('open-' + innerType, r.report_id)">查看</button>
-                            <button class="btn-action btn-copy" @click="$emit('copy-' + innerType, r.report_id)">复制</button>
+                            <button class="btn-action btn-view" @click="$emit('open-' + innerType, r.report_id, 'classic')">查看</button>
+                            <button class="btn-action btn-copy" @click="$emit('copy-' + innerType, r.report_id, 'classic')">复制</button>
                             <button class="btn-action btn-del" @click="$emit('delete-' + innerType, r.report_id)">删除</button>
                         </div>
                     </div>
@@ -396,4 +396,5 @@ const fmt = d => {
     .report-actions { margin-left: 0; margin-top: 15px; width: 100%; justify-content: space-between; }
     .btn-action { flex: 1; text-align: center; }
 }
+
 </style>
