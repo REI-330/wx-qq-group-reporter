@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 项目特定
+config.py
+runtime_outputs/
+*.html
+*.png
+!templates/*.html
+
+# 环境变量
+.env
+backend/.env
+frontend/.env
+
+# 前端
+frontend/node_modules/
+frontend/dist/
+frontend/.DS_Store
+
+# 数据文件
+*.json
+!package*.json
+!tsconfig*.json
+!.vscode/*.json
+
+# 日志
+*.log
+logs/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+*.temp
+*.zip
+*.tar.gz
+
+# 启动脚本生成的文件
+.backend.pid
+.frontend.pid

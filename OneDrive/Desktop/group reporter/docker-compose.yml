@@ -1,0 +1,29 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: qqgroup-report-analyzer
+    ports:
+      - "5001:5000"
+    environment:
+      - FLASK_ENV=production
+      - PORT=5000
+      - ENABLE_IMAGE_EXPORT=true
+      - ALLOWED_ORIGINS=http://localhost:5001,http://localhost:5173,http://localhost:5000
+      - FRONTEND_URL=http://localhost:5000
+      # 如果需要 OpenAI，取消下面的注释并设置
+      # - OPENAI_API_KEY=your-api-key
+      # - OPENAI_BASE_URL=https://api.openai.com/v1
+      # - OPENAI_MODEL=gpt-4o-mini
+    volumes:
+      # 持久化运行时输出（可选）
+      - ./runtime_outputs:/app/runtime_outputs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/api/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
