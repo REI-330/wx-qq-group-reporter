@@ -1,0 +1,35 @@
+# 设置默认行为，自动规范化行结束符
+* text=auto
+
+# Windows 批处理文件必须使用 CRLF
+*.bat text eol=crlf
+
+# Shell 脚本必须使用 LF
+*.sh text eol=lf
+
+# Python 文件使用 LF
+*.py text eol=lf
+
+# JavaScript/Vue/CSS 等前端文件使用 LF  
+*.js text eol=lf
+*.vue text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+
+# Markdown 和文档文件使用 LF
+*.md text eol=lf
+*.txt text eol=lf
+
+# 配置文件使用 LF
+.gitignore text eol=lf
+.gitattributes text eol=lf
+*.example text eol=lf
+
+# 二进制文件
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
