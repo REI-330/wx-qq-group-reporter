@@ -66,7 +66,7 @@
 3.  编辑配置文件（默认配置即可用，无需 MySQL）
     * *(注：也可自己获取对应的 API 后开启 AI 分析、AI 选词，默认关闭。可以在这里配置，也可以开启后在 `backend\envs` 配置，配置后重启后端即可)*
 4.  再次运行 `start.bat` 即可启动
-5.  可能会遇到的问题: start.bat无法启动,这个时候进行编辑器检查,用 VS Code 或 Notepad++ 打开 start.bat,确保状态栏显示的是 CRLF
+5.  可能会遇到的问题: start.bat无法启动,这个时候进行编辑器检查,用 VS Code 或 Notepad++ 打开 start.bat,确保状态栏显示的是 CRLF, 或者直接使用simple_run.bat
 
 **后续运行：**
 直接双击 `start.bat` 即可启动所有服务。
