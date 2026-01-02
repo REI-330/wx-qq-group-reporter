@@ -87,19 +87,6 @@ if not exist "config.py" (
 
 ::: 如果需要配置，提示用户并退出
 if %NEED_CONFIG%==1 (
-    echo.
-    echo ========================================
-    echo 首次运行 - 需要配置
-    echo ========================================
-    echo.
-    echo 步骤1：配置 Web 模式（必需）
-    echo 文件：backend\.env
-    echo.
-    echo 步骤2：配置命令行模式（可选）
-    echo 文件：config.py
-    echo.
-    echo 提示：配置完成后，再次运行 start.bat 即可
-    echo.
     pause
     exit /b 0
 )
@@ -319,3 +306,4 @@ echo ========================================
 echo.
 
 pause
+
