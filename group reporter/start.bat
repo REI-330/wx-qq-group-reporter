@@ -89,31 +89,16 @@ if not exist "config.py" (
 if %NEED_CONFIG%==1 (
     echo.
     echo ========================================
-    echo ⚠️  首次运行 - 需要配置
+    echo 首次运行 - 需要配置
     echo ========================================
     echo.
-    echo 已为您创建配置文件，请按以下步骤操作：
+    echo 步骤1：配置 Web 模式（必需）
+    echo 文件：backend\.env
     echo.
-    echo 📝 步骤1：配置 Web 模式（必需）
-    echo    文件：backend\.env
-    echo    说明：
-    echo    - 默认使用JSON存储（无需MySQL）
-    echo    - 如需MySQL，设置 STORAGE_MODE=mysql 并配置密码
-    echo    - 如需AI功能，配置 OPENAI_API_KEY
+    echo 步骤2：配置命令行模式（可选）
+    echo 文件：config.py
     echo.
-    echo 📝 步骤2：配置命令行模式（可选）
-    echo    文件：config.py
-    echo    说明：
-    echo    - 用于直接运行 python main.py
-    echo    - 修改 INPUT_FILE 为你的聊天记录路径
-    echo    - 其他参数可按需调整
-    echo.
-    echo 💡 提示：
-    echo    - 大多数用户使用 Web 模式即可（浏览器访问）
-    echo    - 命令行模式适合高级用户和批量处理
-    echo    - 配置完成后，再次运行 start.bat 即可
-    echo.
-    echo ========================================
+    echo 提示：配置完成后，再次运行 start.bat 即可
     echo.
     pause
     exit /b 0
@@ -332,4 +317,5 @@ echo.
 echo 📖 详细文档：README.md
 echo ========================================
 echo.
+
 pause
