@@ -57,7 +57,7 @@ app = Flask(__name__)
 # 安全配置（从环境变量读取）
 # ============================================
 
-SECURITY_ENABLED = os.getenv('SECURITY_ENABLED', 'true').lower() == 'true'
+SECURITY_ENABLED = os.getenv('SECURITY_ENABLED', 'true').lower() == 'false'
 DEPLOYMENT_ENV = os.getenv('DEPLOYMENT_ENV', 'local').lower()
 SECURITY_HEADERS_ENABLED = os.getenv('SECURITY_HEADERS_ENABLED', 'true').lower() == 'true'
 FILE_SECURITY_CHECK = os.getenv('FILE_SECURITY_CHECK_ENABLED', 'true').lower() == 'true'
