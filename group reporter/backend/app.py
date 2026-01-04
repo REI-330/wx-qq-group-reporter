@@ -185,17 +185,11 @@ def generate_csrf_token():
     return session['csrf_token']
 
 def validate_csrf_token():
-    if not SECURITY_ENABLED:
-        return True
-    
-    token = request.headers.get('X-CSRF-Token') or request.form.get('csrf_token')
-    session_token = session.get('csrf_token')
-    
-    if not token or not session_token:
-        return False
-    
-    # 使用恒定时间比较防止时序攻击
-    return hmac.compare_digest(token, session_token)
+    """
+    CSRF 保护已移除
+    无论前端是否发送 token，永远返回 True
+    """
+    return True
 
 @app.before_request
 def csrf_protect():
